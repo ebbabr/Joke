@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id = "arrangement">Arrangement</h1>
+    <button id = "create">Create arrangement</button>
+    <button id = "form">Create form</button>
+    <br>
+    <button id="jokeBtn">Give me a joke</button>
+    <button id = "enBtn">En</button>
+    <button id = "noBtn">No</button>
+    <p id = "changeLanguage"></p>
+
+
+<script>
+
+let arrangement = document.getElementById("arrangement");
+let create = document.getElementById("create");
+let form = document.getElementById("form");
+let jokeBtn = document.getElementById("jokeBtn");
+let enBtn = document.getElementById("enBtn");
+let noBtn = document.getElementById("noBtn");
+let changeLanguage = document.getElementById("changeLanguage");
+let language = "En";
+let index = -1;
+
+//let elements = [
+    //document.getElementById("arrangement"),
+    //document.getElementById("create"),
+    //document.getElementById("form"),
+    //document.getElementById("jokeBtn"),
+    //document.getElementById("enBtn"),
+    //document.getElementById("noBtn"),
+    //document.getElementById("changeLanguage"),
+    
+//];
+
+//elements[2].addEventListener("click", () =>{
+//    TLanguage(elements);
+//});
+
+//console.log(TLanguage())
+
+(async function () {
+        serverResponse("En");
+      })();
+
+      create.addEventListener("click", () =>{
+
+      });
+
+      form.addEventListener("click", () =>{
+
+      });
+
+
+      jokeBtn.addEventListener("click", () => {
+        index = -1;
+        serverResponse(language);
+      });
+
+      
+      enBtn.addEventListener("click", async () => {
+        await serverResponse("En");
+        language = "En";
+        elementLanguage();
+      });
+
+      noBtn.addEventListener("click", async () => {
+        await serverResponse("No");
+        language = "No";
+        elementLanguage();
+      });
+
+
+</script>
+
+    
+</body>
+</html>
+
+
+
